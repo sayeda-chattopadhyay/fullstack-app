@@ -1,7 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useLanguage } from "../LanguageContext";
 
 const NavBar = () => {
+  const { toggleLanguage } = useLanguage();
+
   return (
     <nav>
       <ul>
@@ -13,6 +16,9 @@ const NavBar = () => {
         </li>
         <li>
           <Link to="/articles">Articles</Link>
+        </li>
+        <li>
+          <button onClick={toggleLanguage}>change language</button>
         </li>
       </ul>
     </nav>
