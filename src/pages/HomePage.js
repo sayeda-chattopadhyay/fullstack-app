@@ -10,32 +10,22 @@ const HomePage = () => {
           : "Hei, velkommen til bloggen min!"}
       </h1>
       <p>
-        Welcome to my blog! Proin congue ligula id risus posuere, vel eleifend
-        ex egestas. Sed in turpis leo. Aliquam malesuada in massa tincidunt
-        egestas. Nam consectetur varius turpis, non porta arcu porttitor non. In
-        tincidunt vulputate nulla quis egestas. Ut eleifend ut ipsum non
-        fringilla. Praesent imperdiet nulla nec est luctus, at sodales purus
-        euismod.
+        {language === "en"
+          ? "React is a free and open-source front-end JavaScript library for building user interfaces based on components. It is maintained by Meta and a community of individual developers and companies. React can be used to develop single-page, mobile, or server-rendered applications with frameworks like Next.js."
+          : "React er et gratis og åpen kildekode-frontend JavaScript-bibliotek for bygge brukergrensesnitt basert på komponenter. Det vedlikeholdes av Meta og et fellesskap av individuelle utviklere og selskaper. Reager kan være brukes til å utvikle enkeltside-, mobil- eller server-renderte applikasjoner med rammeverk som Next.js."}
       </p>
       <p>
-        Donec vel mauris lectus. Etiam nec lectus urna. Sed sodales ultrices
-        dapibus. Nam blandit tristique risus, eget accumsan nisl interdum eu.
-        Aenean ac accumsan nisi. Nunc vel pulvinar diam. Nam eleifend egestas
-        viverra. Donec finibus lectus sed lorem ultricies, eget ornare leo
-        luctus. Morbi vehicula, nulla eu tempor interdum, nibh elit congue
-        tellus, ac vulputate urna lorem nec nisi. Morbi id consequat quam.
-        Vivamus accumsan dui in facilisis aliquet.,
+        {language === "en"
+          ? "Node.js is a cross-platform, open-source JavaScript runtime environment that can run on Windows, Linux, Unix, macOS, and more. Node.js runs on the V8 JavaScript engine and executes JavaScript code outside a web browser. Node.js lets developers use JavaScript to write command line tools and for server-side scripting."
+          : "Node.js er en plattformuavhengig, åpen kildekode JavaScript runtime-miljø som kan kjøre på Windows, Linux, Unix, macOS og mer. Node.js kjører på V8 JavaScript-motoren og utfører JavaScript-kode utenfor en nettleser. Node.js lar utviklere bruke JavaScript til å skrive kommandolinjeverktøy og for server-side scripting."}
       </p>
       <p>
-        Etiam nec lectus urna. Sed sodales ultrices dapibus. Nam blandit
-        tristique risus, eget accumsan nisl interdum eu. Aenean ac accumsan
-        nisi. Nunc vel pulvinar diam. Nam eleifend egestas viverra. Donec
-        finibus lectus sed lorem ultricies, eget ornare leo luctus. Morbi
-        vehicula, nulla eu tempor interdum, nibh elit congue tellus, ac
-        vulputate urna lorem nec nisi. Morbi id consequat quam. Vivamus accumsan
-        dui in facilisis aliquet.,
+        {language === "en"
+          ? "MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. MongoDB is developed by MongoDB Inc. and current versions are licensed under the Server Side Public License."
+          : "MongoDB er et kildekode-tilgjengelig tverrplattform dokument-orientert databaseprogram. Klassifisert som et NoSQL databaseprogram, bruker MongoDB JSON-lignende dokumenter med valgfrie skjemaer. MongoDB er utviklet av MongoDB Inc. og nåværende versjoner er lisensiert under Server Side Public License."}
       </p>
     </>
   );
 };
+
 export default HomePage;
