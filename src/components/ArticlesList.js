@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
+import { useLanguage } from "../LanguageContext";
 
 const ArticlesList = ({ articles }) => {
+  const { language } = useLanguage();
   return (
     <>
       {articles.map((article) => (
@@ -11,7 +13,13 @@ const ArticlesList = ({ articles }) => {
         >
           <h2>{article.name}</h2>
           <h3>{article.title}</h3>
-          <p>{article.content[0].substring(0, 150)}...</p>
+          <p>
+            {language === "en"
+              ? article.content[0].substring(0, 150)
+              : article.content[3].substring(0, 150)}
+            ...
+          </p>
+          <p>{article.content[1].substring(0, 150)}...</p>
         </Link>
       ))}
     </>
