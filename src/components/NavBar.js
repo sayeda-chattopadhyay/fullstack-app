@@ -33,7 +33,6 @@ const NavBar = () => {
             </li>
           </>
         )}
-
         <li>
           <button onClick={toggleLanguage}>change language</button>
         </li>
