@@ -13,10 +13,7 @@ const ArticlesList = ({ articles }) => {
         >
           <h2>{article.name}</h2>
           <h3>{article.title}</h3>
-          <p>
-            {language === "en" ? article.content[0] : article.content[3]}
-            ...
-          </p>
+          <p>{language === "en" ? article.content[0] : article.content[3]}</p>
           {/* <p>{article.content[1].substring(0, 150)}...</p> */}
         </Link>
       ))}
