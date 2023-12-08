@@ -11,11 +11,9 @@ const ArticlesList = ({ articles }) => {
           key={article.name}
           className="article-list-item"
         >
-          <h2>{article.name}</h2>
-          <h3>{article.title}</h3>
+          <h2>{language === "en" ? article.name : article.navn}</h2>
+          <h3>{language === "en" ? article.title : article.tittel}</h3>
           <p>{language === "en" ? article.content[0] : article.content[3]}</p>
-          {/* <p>{language === "en" ? article.content[0] : article.content[3]}</p> */}
-          {/* <p>{article.content[1].substring(0, 150)}...</p> */}
         </Link>
       ))}
     </>
