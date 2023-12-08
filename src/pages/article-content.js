@@ -23,17 +23,17 @@ const articles = [
       `Det distribuerte utviklingsprosjektet Node.js ble tidligere styrt av Node.js Foundation,[8] og har nå fusjonert med JS Foundation for å danne OpenJS Foundation. OpenJS Foundation er tilrettelagt av Linux Foundations Collaborative Projects-program.`,
     ],
   },
-  {
-    name: "mongodb",
-    title: "Learn MongoDB",
-    content: [
-      `MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. MongoDB is developed by MongoDB Inc. and current versions are licensed under the Server Side Public License.`,
-      `MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. MongoDB is developed by MongoDB Inc. and current versions are licensed under the Server Side Public License (SSPL). MongoDB is a member of the MACH Alliance`,
-      `MongoDB provides high availability with replica sets.[34] A replica set consists of two or more copies of the data. Each replica-set member may act in the role of primary or secondary replica at any time. All writes and reads are done on the primary replica by default. Secondary replicas maintain a copy of the data of the primary using built-in replication. When a primary replica fails, the replica set automatically conducts an election process to determine which secondary should become the primary. Secondaries can optionally serve read operations, but that data is only eventually consistent by default.``MongoDB er et kildetilgjengelig dokumentorientert databaseprogram på tvers av plattformer. Klassifisert som et NoSQL-databaseprogram, bruker MongoDB JSON-lignende dokumenter med valgfrie skjemaer. MongoDB er utviklet av MongoDB Inc. og gjeldende versjoner er lisensiert under Server Side Public License.`,
-      `MongoDB er et kildetilgjengelig dokumentorientert databaseprogram på tvers av plattformer. Klassifisert som et NoSQL-databaseprogram, bruker MongoDB JSON-lignende dokumenter med valgfrie skjemaer. MongoDB er utviklet av MongoDB Inc. og gjeldende versjoner er lisensiert under Server Side Public License (SSPL). MongoDB er medlem av MACH Alliance`,
-      `MongoDB gir høy tilgjengelighet med replikasett.[34] Et replikasett består av to eller flere kopier av dataene. Hvert replikasettmedlem kan til enhver tid fungere i rollen som primær eller sekundær replika. All skriving og lesing gjøres på den primære replikaen som standard. Sekundære replikaer opprettholder en kopi av dataene til den primære ved hjelp av innebygd replikering. Når en primær replika mislykkes, gjennomfører replikasettet automatisk en valgprosess for å bestemme hvilken sekundær som skal bli primær. Sekundærer kan valgfritt betjene leseoperasjoner, men disse dataene er bare til slutt konsistente som standard.`,
-    ],
-  },
+  // {
+  //   name: "mongodb",
+  //   title: "Learn MongoDB",
+  //   content: [
+  //     `MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. MongoDB is developed by MongoDB Inc. and current versions are licensed under the Server Side Public License.`,
+  //     `MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. MongoDB is developed by MongoDB Inc. and current versions are licensed under the Server Side Public License (SSPL). MongoDB is a member of the MACH Alliance`,
+  //     `MongoDB provides high availability with replica sets.[34] A replica set consists of two or more copies of the data. Each replica-set member may act in the role of primary or secondary replica at any time. All writes and reads are done on the primary replica by default. Secondary replicas maintain a copy of the data of the primary using built-in replication. When a primary replica fails, the replica set automatically conducts an election process to determine which secondary should become the primary. Secondaries can optionally serve read operations, but that data is only eventually consistent by default.``MongoDB er et kildetilgjengelig dokumentorientert databaseprogram på tvers av plattformer. Klassifisert som et NoSQL-databaseprogram, bruker MongoDB JSON-lignende dokumenter med valgfrie skjemaer. MongoDB er utviklet av MongoDB Inc. og gjeldende versjoner er lisensiert under Server Side Public License.`,
+  //     `MongoDB er et kildetilgjengelig dokumentorientert databaseprogram på tvers av plattformer. Klassifisert som et NoSQL-databaseprogram, bruker MongoDB JSON-lignende dokumenter med valgfrie skjemaer. MongoDB er utviklet av MongoDB Inc. og gjeldende versjoner er lisensiert under Server Side Public License (SSPL). MongoDB er medlem av MACH Alliance`,
+  //     `MongoDB gir høy tilgjengelighet med replikasett.[34] Et replikasett består av to eller flere kopier av dataene. Hvert replikasettmedlem kan til enhver tid fungere i rollen som primær eller sekundær replika. All skriving og lesing gjøres på den primære replikaen som standard. Sekundære replikaer opprettholder en kopi av dataene til den primære ved hjelp av innebygd replikering. Når en primær replika mislykkes, gjennomfører replikasettet automatisk en valgprosess for å bestemme hvilken sekundær som skal bli primær. Sekundærer kan valgfritt betjene leseoperasjoner, men disse dataene er bare til slutt konsistente som standard.`,
+  //   ],
+  // },
 ];
 
 export default articles;
