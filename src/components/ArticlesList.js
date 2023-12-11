@@ -1,22 +1,27 @@
 import { Link } from "react-router-dom";
 import { useLanguage } from "../LanguageContext";
 
-const ArticlesList = ({ articles }) => {
-  const { language } = useLanguage();
+const ArticlesList = () => {
+  const { language, articles } = useLanguage();
+  const articlesList = articles[language] || [];
+
   return (
-    <>
-      {articles.map((article) => (
+    <div className="article-card">
+      {articlesList.map((article) => (
         <Link
           to={`/articles/${article.name}`}
           key={article.name}
           className="article-list-item"
         >
-          <h2>{language === "en" ? article.name : article.navn}</h2>
-          <h3>{language === "en" ? article.title : article.tittel}</h3>
-          <p>{language === "en" ? article.content[0] : article.content[3]}</p>
+          <h2>{article.name}</h2>
+          <h3>{article.title}</h3>
+
+          {article.content.map((para, index) => (
+            <p key={index}>{para}</p>
+          ))}
         </Link>
       ))}
-    </>
+    </div>
   );
 };
 
