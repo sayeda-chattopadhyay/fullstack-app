@@ -1,6 +1,6 @@
 const articles = [
   {
-    name: "lær-react",
+    name: "learn-react",
     title: "Den raskeste måten å lære React på",
     content: [
       `React er et gratis og åpen kildekode-front-end JavaScript-bibliotek for å bygge brukergrensesnitt basert på komponenter.`,
@@ -9,7 +9,7 @@ const articles = [
     ],
   },
   {
-    name: "lær-node",
+    name: "learn-node",
     title: "Slik bygger du en Node-server på 10 minutter",
     content: [
       `Node.js er et cross-platform, åpen kildekode JavaScript-runtime-miljø som kan kjøres på Windows, Linux, Unix, macOS og mer. Node.js kjører på V8 JavaScript-motoren, og kjører JavaScript-kode utenfor en nettleser. Node.js lar utviklere bruke JavaScript til å skrive kommandolinjeverktøy og for skripting på serversiden`,
