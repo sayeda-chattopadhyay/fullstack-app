@@ -64,6 +64,21 @@ nav a:hover {
   color: white;
 }
 
+.btn {
+  padding: 10px 30px;
+  background: black;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: white;
+  color: black;
+  border: 2px solid black;
+}
+
 #page-body {
   max-width: 700px;
   margin: auto;

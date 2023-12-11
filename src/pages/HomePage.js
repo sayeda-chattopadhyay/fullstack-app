@@ -1,4 +1,5 @@
 import { useLanguage } from "../LanguageContext";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   const { language } = useLanguage();
@@ -24,6 +25,9 @@ const HomePage = () => {
           ? "MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. MongoDB is developed by MongoDB Inc. and current versions are licensed under the Server Side Public License."
           : "MongoDB er et kildekode-tilgjengelig tverrplattform dokument-orientert databaseprogram. Klassifisert som et NoSQL databaseprogram, bruker MongoDB JSON-lignende dokumenter med valgfrie skjemaer. MongoDB er utviklet av MongoDB Inc. og nåværende versjoner er lisensiert under Server Side Public License."}
       </p>
+      <Link to="/about" className="btn">
+        {language === "en" ? "About Us" : "Om oss"}
+      </Link>
     </>
   );
 };
