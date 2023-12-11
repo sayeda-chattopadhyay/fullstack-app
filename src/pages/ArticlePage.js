@@ -1,11 +1,25 @@
 import { useParams } from "react-router-dom";
-import articles from "./article-content";
+import { useLanguage } from "../LanguageContext";
 import NotFoundPage from "./NotFoundPage";
 
 const ArticlePage = () => {
   const { articleId } = useParams();
+  const { language, articles } = useLanguage();
 
-  const article = articles.find((article) => article.name === articleId);
+  console.log("Article ID:", articleId);
+  console.log("Language:", language);
+  console.log("Articles:", articles);
+
+  if (!articles[language]) {
+    // return <NotFoundPage />;
+    return <div>Loading...</div>;
+  }
+
+  const article = articles[language].find(
+    (article) => article.name === articleId
+  );
+
+  console.log("Article:", article);
 
   if (!article) {
     return <NotFoundPage />;
@@ -14,7 +28,6 @@ const ArticlePage = () => {
   return (
     <>
       <h1>{article.title}</h1>
-      <h2>this is param id :{articleId}</h2>
       {article.content.map((paragraph, index) => (
         <p key={index}>{paragraph}</p>
       ))}
@@ -23,3 +36,5 @@ const ArticlePage = () => {
 };
 
 export default ArticlePage;
+
+
