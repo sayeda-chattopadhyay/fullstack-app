@@ -5,6 +5,11 @@ import { useLanguage } from "../LanguageContext";
 const NavBar = () => {
   const { language, toggleLanguage } = useLanguage();
 
+  const handleLanguageChange = (event) => {
+    const newLanguage = event.target.value;
+    toggleLanguage(newLanguage);
+  };
+
   return (
     <nav>
       <ul>
@@ -19,6 +24,7 @@ const NavBar = () => {
             <li>
               <Link to="/articles">Articles</Link>
             </li>
+            <li>Language</li>
           </>
         ) : (
           <>
@@ -31,11 +37,13 @@ const NavBar = () => {
             <li>
               <Link to="/articles">artikler</Link>
             </li>
+            <li>Språk</li>
           </>
         )}
-        <li>
-          <button onClick={toggleLanguage}>change language</button>
-        </li>
+        <select name="" id="" value={language} onChange={handleLanguageChange}>
+          <option value="en">En</option>
+          <option value="no">No</option>
+        </select>
       </ul>
     </nav>
   );
