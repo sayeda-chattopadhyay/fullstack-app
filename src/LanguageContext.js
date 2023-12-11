@@ -6,6 +6,7 @@ export const LanguageProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const localLanguage = localStorage.getItem("language") || "en";
   const [language, setLanguage] = useState(localLanguage);
+
   const [articles, setArticles] = useState({
     en: [],
     no: [],
@@ -18,7 +19,7 @@ export const LanguageProvider = ({ children }) => {
         const contentNo = await import(`./pages/no-content.js`);
         console.log("contentEn:", contentEn);
         console.log("contentNo:", contentNo);
-        // setArticles(content.default);
+
         setArticles({
           en: contentEn.default,
           no: contentNo.default,
@@ -37,19 +38,9 @@ export const LanguageProvider = ({ children }) => {
     return <div>Loading...</div>;
   }
 
-  // const toggleLanguage = () => {
-  //   const newLanguage = language === "en" ? "no" : "en";
-  //   console.log("Language updated:", newLanguage);
-  //   setLanguage(newLanguage);
-  //   localStorage.setItem("language", newLanguage);
-  // };
-
-  const toggleLanguage = () => {
-    setLanguage((prevLanguage) => {
-      const newLanguage = prevLanguage === "en" ? "no" : "en";
-      localStorage.setItem("language", newLanguage);
-      return newLanguage;
-    });
+  const toggleLanguage = (newLanguage) => {
+    setLanguage(newLanguage);
+    localStorage.setItem("language", newLanguage);
   };
 
   return (
