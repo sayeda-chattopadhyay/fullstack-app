@@ -7,13 +7,14 @@ const ArticlesList = () => {
 
   return (
     <div className="article-card">
+      <h1>{language === "en" ? "Articles" : "Artikler"}</h1>
       {articlesList.map((article) => (
         <Link
           to={`/articles/${article.name}`}
           key={article.name}
           className="article-list-item"
         >
-          <h2>{article.name}</h2>
+          {/* <h2>{article.name}</h2> */}
           <h3>{article.title}</h3>
 
           {article.content.map((para, index) => (
