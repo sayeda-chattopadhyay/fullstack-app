@@ -4,7 +4,7 @@ const LanguageContext = createContext();
 
 export const LanguageProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
-  const localLanguage = localStorage.getItem("language") || "en";
+  const localLanguage = localStorage.getItem("language") || "no";
   const [language, setLanguage] = useState(localLanguage);
 
   const [articles, setArticles] = useState({
@@ -12,18 +12,32 @@ export const LanguageProvider = ({ children }) => {
     no: [],
   });
 
+  const [news, setNews] = useState({
+    en: [],
+    no: [],
+  });
+
+
   useEffect(() => {
     const fetchArticles = async () => {
       try {
         const contentEn = await import(`./pages/en-content.js`);
         const contentNo = await import(`./pages/no-content.js`);
-        console.log("contentEn:", contentEn);
-        console.log("contentNo:", contentNo);
+        const newsEn = await import(`./pages/en-news.js`);
+        const newsNo = await import(`./pages/no-news.js`);
 
         setArticles({
           en: contentEn.default,
           no: contentNo.default,
         });
+
+        setNews({
+          en: newsEn.default,
+          no: newsNo.default,
+        });
+
+
+
       } catch (err) {
         console.log(err);
       } finally {
@@ -44,7 +58,7 @@ export const LanguageProvider = ({ children }) => {
   };
 
   return (
-    <LanguageContext.Provider value={{ language, toggleLanguage, articles }}>
+    <LanguageContext.Provider value={{ language, toggleLanguage, articles , news}}>
       {children}
     </LanguageContext.Provider>
   );
