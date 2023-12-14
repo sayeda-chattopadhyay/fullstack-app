@@ -24,6 +24,9 @@ const NavBar = () => {
             <li>
               <Link to="/articles">Articles</Link>
             </li>
+            <li>
+              <Link to="/news">News</Link>
+            </li>
             <li>Language</li>
           </>
         ) : (
@@ -36,6 +39,9 @@ const NavBar = () => {
             </li>
             <li>
               <Link to="/articles">artikler</Link>
+            </li>
+            <li>
+              <Link to="/news">Nyheter</Link>
             </li>
             <li>Språk</li>
           </>
